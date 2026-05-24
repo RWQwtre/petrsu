@@ -1,0 +1,34 @@
+/**
+ * floor.c -- программа для расчета нужного этажа
+ *
+ * Copyright (c) 2022, Егор Яшин <student@cs.petrsu.ru>
+ *
+ * This code is licensed under MIT license.
+ */
+
+#include<stdio.h>
+
+int main()
+{
+    // Номер квартиры
+    int flat_number;
+
+    /* Число квартир на этаже */
+    int flats_per_floor;
+
+    /* Запрашиваем квартиру, в которой проживает адресат */
+    printf
+        ("Введите номер интересующей квартиры: ");
+    scanf("%d", &flat_number);
+
+    /* Запрашиваем число квартир на этаже */
+    printf
+        ("Введите число квартир на каждом этаже: ");
+    scanf("%d", &flats_per_floor);
+
+    /* Рассчитываем и выводим номер этажа */
+    int floor = (flat_number - 1) / flats_per_floor + 1;
+    printf("Вам нужно подняться на %d этаж\n",floor);
+
+    return 0;
+}
